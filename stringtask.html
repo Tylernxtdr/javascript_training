@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati mollitia provident atque modi eveniet illo
+        magni esse quis facere? Maxime consequuntur corporis necessitatibus commodi atque nulla ipsum inventore
+        voluptatem expedita.</p>
+
+
+
+    <script>
+        let f_name = '  JOHn  '
+        f_name = f_name.trim(' JOHN .').trimEnd().toLowerCase();
+        console.log(f_name)
+
+        let sentence_one = 'The Dog Breed is German Shepherd'
+        //  only display “Breed is German”
+        sentence_one = sentence_one.substring(7, 23)
+        console.log(sentence_one)
+
+        let sentence_two = 'Defeats for the Clinton forces, this was her moment of triumph'
+        // display “Clinton forces”
+        sentence_two = sentence_two.substring(15, 30)
+        console.log(sentence_two)
+
+        let sentence_three = 'The lazy dog ran so fast it hit the wall.'
+        // “The lazy dog; ran so fast; it hit the wall.” 
+        sentence_three = sentence_three.replace('dog ', 'dog; ').replace('fast ', 'fast; ')
+        console.log(sentence_three)
+
+        let colors = ['red', 'green', 'blue']
+        colors.splice(1, 1, 'pink')
+        console.log(colors)
+
+        let lengthOfColors = colors.length
+        console.log(lengthOfColors)
+
+        colors.pop()
+        console.log(colors)
+
+
+
+        let names = ['Jane', 'John', 'Jake']
+        names.splice(1, 2, 'Mike')
+        console.log(names)
+
+        let arr1=[1,2,3,4,5]
+        let arr2=[6,7,8,9]
+        combinedArray = arr1.concat(arr2)
+        combinedArray.shift()
+        console.log(combinedArray)
+
+
+
+    </script>
+</body>
+
+</html>

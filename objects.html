@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <P>JS OBJECTS</P>
+
+
+    <script>
+        let person = {
+            name: 'Tyler',
+            age: 20,
+            height: '170cm',
+            job: 'software developer',
+            ismarried: false,
+            'full address': 'Nairobi'
+        }
+        let key = 'name'
+        console.log(person[key])
+
+
+        let user = {
+            name: "Alice",
+            hobbies: ["cycling", "painting"],
+            posts: [
+                {
+                    id: 1,
+                    title: "My first post",
+                    comments: [
+                        { id: 101, text: "Great post!" },
+                        { id: 102, text: "Thanks for sharing." },
+                    ],
+                },
+                {
+                    id: 2,
+                    title: "Another day",
+                    comments: [],
+                },
+            ],
+        };
+
+        console.log(user.posts[0].comments[1].text)
+        console.log(Object.keys(user))
+        console.log(Object.values(user))
+        console.log(Object.entries(user))
+
+
+
+
+
+    </script>
+</body>
+
+</html>
