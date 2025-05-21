@@ -1,15 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
-    SLIDE 75 AND 76
+    SLIDE 75 AND 76 <br>
+    kubernetes:true <br>
+    display the keys of certifications and their length <br>
+    display value of skills , their length and reverse the order
     <script>
 
+        let my_object = [23, 'Jane', 560, ['Lesson', 'Maths', { 'currency': 'KES' }], 987, 76, 'John']
+        /*Display:
+1. KES
+2. 560
+3. Maths*/
+
+        console.log(my_object[3][2].currency)
+        console.log(my_object[2])
+        console.log(my_object[3][1])
+
+
+
+
+
+        let company = {
+            name: "TechNova Inc.",
+            founded: 2012,
+            departments: {
+                engineering: {
+                    head: {
+                        name: "Alice Johnson",
+                        position: "VP of Engineering",
+                    },
+                    teams: {
+                        frontend: {
+                            lead: "Bob Smith",
+                            members: [
+                                {
+                                    name: "Carol",
+                                    role: "Senior Developer",
+                                    skills: {
+                                        js: 1, react: 2, vue: 3, db: [
+                                            {
+                                                postgresql: false,
+                                                nosql: {
+
+                                                    mongodb: ["True", {
+                                                        learning: false,
+                                                    }]
+
+                                                }
+                                            }
+                                        ]
+                                    },
+                                },
+                                {
+                                    name: "David",
+                                    role: "Junior Developer",
+                                    skills: { js: 1, react: 2, vue: 3 },
+                                },
+                            ],
+                        },
+                        backend: {
+                            lead: "Eve Black",
+                            members: [
+                                {
+                                    name: "Frank",
+                                    role: "Senior Backend Dev",
+                                    languages: ["Python", "Go", "Node.js"],
+                                },
+                                {
+                                    name: "Grace",
+                                    role: "DevOps",
+                                    certifications: {
+                                        aws: true,
+                                        docker: true,
+                                        kubernetes: true,
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                },
+
+            },
+
+        };
+
+
+        console.log(company.departments.engineering.teams.frontend.members[0].skills.db[0].nosql.mongodb[1].learning)
+        console.log(company.departments.engineering.teams.backend.members[0].languages[2])
+        console.log(company.departments.engineering.teams.backend.members[1].certifications.docker)
+        console.log(company.departments.engineering.teams.backend.members[1].certifications)
+        console.log(Object.keys(company.departments.engineering.teams.backend.members[1].certifications))
+        console.log(Object.values(company.departments.engineering.teams.frontend.members[1].skills))
     </script>
 </body>
+
 </html>
