@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nam ut velit quae sequi et eligendi, officia
+        ducimus, ratione excepturi error autem incidunt.</p>
+
+
+    <script>
+        // task on slide 66
+        // number 1
+        let number = 1;
+        if (number % 2 == 0) {
+            console.log('Even')
+        } else {
+            console.log('odd')
+        }
+
+        // number 2
+
+        let name1 = 1234567;
+        let name2 = 12;
+        let name3 = 2000;
+
+        if (name1 > name2 && name1 > name3) {
+            console.log(name1)
+        } else if (name2 > name1 && name2 > name3) {
+            console.log(name2)
+        } else {
+            console.log(name3)
+        }
+
+        // number 3
+
+        let year = 2025;
+        if (year % 4 == 0 || year % 400 == 0 && year % 100 != 0) {
+            console.log('leap year')
+        } else {
+            console.log('not a leap year')
+        }
+
+
+
+        // TASK 2 
+        /* Get user input using prompt('Enter your age:'). IF User is 18 or older, give feedback:'You are old enought to drive ' but if not 18 give another feedback stating to wait for the number of years to turn 18 */
+
+        let age =prompt('Enter your age: ');
+         rem_age = 18 - age;
+        if (age >= 18 ) {
+            console.log('You are old enought to drive')
+        } else {
+            console.log(`please wait for ${rem_age} years to drive`)
+        }
+
+        // Task 3
+        
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
