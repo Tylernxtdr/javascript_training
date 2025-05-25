@@ -38,7 +38,7 @@
 
         // number 3
 
-        let year = 2025;
+        let year = 2004;
         if (year % 4 == 0 || year % 400 == 0 && year % 100 != 0) {
             console.log('leap year')
         } else {
@@ -50,16 +50,62 @@
         // TASK 2 
         /* Get user input using prompt('Enter your age:'). IF User is 18 or older, give feedback:'You are old enought to drive ' but if not 18 give another feedback stating to wait for the number of years to turn 18 */
 
-        let age =prompt('Enter your age: ');
-         rem_age = 18 - age;
-        if (age >= 18 ) {
-            console.log('You are old enought to drive')
+        let age = prompt('Enter your age: ');
+        rem_age = 18 - age;
+        if (age >= 18) {
+            console.log('You are old enough to drive')
         } else {
-            console.log(`please wait for ${rem_age} years to drive`)
+            console.log(`please wait for ${rem_age} years inorder  to drive`)
         }
 
         // Task 3
-        
+        /* write a code which can give grades to students according to their scores
+        90-100 - A
+        70-89 - B
+        60-69 - C
+        50-59 - D
+        0-49 - E*/
+
+        let grades = 100
+        if (grades >= 90 && grades <= 100) {
+            console.log('A')
+        } else if (grades >= 70 && grades <= 89) {
+            console.log('B')
+        } else if (grades >= 60 && grades <= 69) {
+            console.log('C')
+        } else if (grades >= 50 && grades <= 59) {
+            console.log('D')
+        } else {
+            console.log('E')
+        }
+
+
+
+        // TASK 4
+        /* Check if the season is autumn , winter , summer or spring
+        If user input is:
+        September ,October , November - season is autumn
+        December , January or February - season is Winter
+        March , April or May - season is Spring
+        Jne , July or August - season is summer*/
+
+        let month = 'April'
+        if (month == 'September' || month == 'October' || month == 'November') {
+            console.log('Autumn')
+        } else if (month == 'December' || month == 'January' || month == 'February') {
+            console.log('Winter')
+        } else if (month == 'March' || month == 'April' || month == 'May') {
+            console.log('Spring')
+        } else {
+            console.log('Summer')
+        }
+
+
+
+
+
+
+
 
 
 
