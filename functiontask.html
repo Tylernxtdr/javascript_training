@@ -70,16 +70,18 @@
         // The goal of this exercise is to think about some internals that programs normally take care of for us. 
 
         function strings() {
-            let str1 = prompt('Enter your first string:')
-            let str2 = prompt('Enter your second string')
-            let str3 = prompt('Enter your last string')
+            let str1 = prompt('Enter your first string:').length
+            let str2 = prompt('Enter your second string').length
+            let str3 = prompt('Enter your last string').length
 
             if(str1 > str2 && str1 > str3) {
                 console.log(str1)
             } else if (str2 > str1 && str2 > str3) {
                 console.log(str2)
-            } else {
+            } else if (str3 > str1 && str3 > str2) {
                 console.log(str3)
+            } else {
+                console.log('Invalid input')
             }
 
         }
@@ -88,27 +90,53 @@
 
 
         //6. Write a program that lets the user input a password. Give them only 4 attempts to check the passwords entered against “admin@123”. If the password is correct access is granted. After you show them a message , the account is blocked.
-// 7. Write that prompts the user to input student marks. The input should be between 0 and 100.Then output the correct grade: 
-// A > 79 , B - 60 to 79, C  > 49 to 59, D - 40 to 49, E - less 40
 
-function marks() {
-    let mark1 = prompt("Enter your marks")
-    if (mark1 > 79 && mark1 <=100) {
-        console.log("A")
-    } else if (mark1 <=79 && mark1 >=60) {
-        console.log("B")
-    } else if (mark1 <=59 && mark1 >=49) {
-        console.log("C")
-    } else if (mark1 <=49 && mark1 >=40) {
-        console.log("D")
-    } else if (mark1 <= 40) {
-        console.log("E")
-    } else {
-        console.log("Invalid input")
-    }
+        function pin() {
+            for (i = 4; i < 1; i--) {
+                let p_no = Number(prompt("Enter your pin:"))
+                let rem_attempts = i - 1;
+                if (p_no == 12345) {
+                    console.log("you have successfully logged into your account")
+                    break
+                } else if (p_no != 12345) {
+                    console.log(`Wrong pin , you have ${rem_attempts} attempts remaining try again`)
+                } if (rem_attempts <= 1) {
+                    console.log("Account blocked")
+                }
+
+            }
+        }
+        pin()
+        // 7. Write that prompts the user to input student marks. The input should be between 0 and 100.Then output the correct grade: 
+        // A > 79 , B - 60 to 79, C  > 49 to 59, D - 40 to 49, E - less 40
+
+        function marks() {
+            let mark1 = prompt("Enter your marks")
+            if (mark1 > 79 && mark1 <=100) {
+                console.log("A")
+            } else if (mark1 <=79 && mark1 >=60) {
+                console.log("B")
+            } else if (mark1 <=59 && mark1 >=49) {
+                console.log("C")
+            } else if (mark1 <=49 && mark1 >=40) {
+                console.log("D")
+            } else if (mark1 <= 40) {
+                console.log("E")
+            } else {
+                console.log("Invalid input")
+            }
+
+        }
+        marks()
+
+//8.Write a program that takes as input the speed of a car e.g 80. If the speed is less than 70, it should print “Ok”. Otherwise, for every 5 km/s above the speed limit (70), it should give the driver one demerit point and print the total number of demerit points.
+// For example, if the speed is 80, it should print: “Points: 2”. If the driver gets more than 12 points, the function should print: “License suspended”.
+
+function soc() {
+    let speed = Number(prompt("Enter speed of car: "))
+
 
 }
-marks()
 
 
 
